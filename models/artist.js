@@ -3,7 +3,11 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const ArtistSchema = new Schema({
-  name: {
+  firstName: {
+    type: String, 
+    required: true
+  },
+  lastName: {
     type: String, 
     required: true
   },

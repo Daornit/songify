@@ -8,7 +8,8 @@ const TrackSchema = new Schema({
     required: true
   },
   lyrics: {
-    type: Schema.Types.ObjectId, ref: 'Lyrics'
+    type: Schema.Types.ObjectId, ref: 'Lyrics',
+    required: true
   }
 });
 

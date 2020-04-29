@@ -14,7 +14,8 @@ const AlbumSchema = new Schema({
     type: Date
   },
   artist: {
-    type: Schema.Types.ObjectId, ref: 'Artist'
+    type: Schema.Types.ObjectId, ref: 'Artist',
+    required: true
   },
   songs: [{
     type: Schema.Types.ObjectId, ref: 'Song'
