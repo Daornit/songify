@@ -7,7 +7,13 @@ const { ApolloServer } = require('apollo-server-express');
 require('dotenv').config();
 
 // Before app starts all models loading
-// require('./models/file');
+require('./models/album');
+require('./models/artist');
+require('./models/genre');
+require('./models/language');
+require('./models/lyrics');
+require('./models/song');
+require('./models/track');
 
 const graphQlSchema = require('./graphql/schema');
 const graphQlResolvers = require('./graphql/resolvers');
@@ -37,6 +43,7 @@ app.use((req, res, next) => {
 
 // app.use(isAuth);
 const path = '/';
+
 server.applyMiddleware({ app, path });
 
 mongoose.connect(process.env.DATABASE_URL).then(() => {
